@@ -1,0 +1,17 @@
+name: checkDatabase
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: checkDatabase
+    environment:
+      MYSQL_DATABASE: checkDatabase
+
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD : root
+    ports:
+      - '8081:8080'
+    volumes:
+      - my-db-data:/var/lib/mysql
+volumes:
+  my-db-data:
