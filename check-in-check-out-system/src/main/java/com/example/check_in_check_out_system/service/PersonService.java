@@ -21,6 +21,7 @@ public class PersonService {
 
     //Check-in
     public Person checkIn(Person person) {
+        person.setCheckInTime(LocalDateTime.now()); //Resolved ticket #1: now is not necesary input the date manually
         return personRepository.save(person);
     }
 
@@ -35,7 +36,6 @@ public class PersonService {
         //Check-in register
         person.setCheckOutTime(LocalDateTime.now());
         return Optional.of(personRepository.save(person));
-
     }
 
     //All the records
@@ -47,6 +47,5 @@ public class PersonService {
     public void deleteRecord(Long id) {
         personRepository.deleteById(id);
     }
-
 
 }
