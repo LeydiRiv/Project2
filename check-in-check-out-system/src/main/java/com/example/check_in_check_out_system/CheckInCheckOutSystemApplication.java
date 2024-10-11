@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CheckInCheckOutSystemApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CheckInCheckOutSystemApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CheckInCheckOutSystemApplication.class, args);
+    }
 
 }
